@@ -17,5 +17,5 @@ before_install:
   - echo -e $sshkey > .ssh/id_rsa
   - chmod 600 .ssh/id_rsa
 
-script: ssh ssh -o StrictHostKeyChecking=no $host "ls"
+script: ssh -o StrictHostKeyChecking=no $host "ls"
 
