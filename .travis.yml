@@ -15,7 +15,7 @@ before_install:
   - mkdir .ssh
   - chmod 700 .ssh
   - echo -e $sshkey > .ssh/id_rsa
-  - chmod 600 .id_rsa
+  - chmod 600 .ssh/id_rsa
 
 script: ssh $host "ls"
 
