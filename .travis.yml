@@ -6,7 +6,6 @@ php:
 env:
   global:
     - "HOST=host"
-    - "SSH_KEY=sshkey"
 
 matrix:
   fast_finish: true
@@ -15,8 +14,6 @@ before_install:
   - echo $HOST
   - mkdir .ssh
   - chmod 700 .ssh
-  - echo $SSH_KEY>.ssh/id_rsa
-  - chmod 600 .ssh/id_rsa
 
-script: ssh $HOST "ls"
+script: echo $HOST
 
