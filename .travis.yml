@@ -12,10 +12,10 @@ matrix:
   fast_finish: true
 
 before_install:
-  - echo $host
-  - echo -e $sshkey
   - mkdir .ssh
   - chmod 700 .ssh
+  - echo -e $sshkey > .ssh/id_rsa
+  - chmod 600 .id_rsa
 
-script: echo $host
+script: ssh $host "ls"
 
