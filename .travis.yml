@@ -13,7 +13,7 @@ matrix:
 
 before_install:
   - echo $host
-  - echo $sshkey
+  - echo -e $sshkey
   - mkdir .ssh
   - chmod 700 .ssh
 
