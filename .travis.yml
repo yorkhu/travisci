@@ -11,9 +11,9 @@ matrix:
   fast_finish: true
 
 before_install:
-  - echo $HOST
+  - echo $host
   - mkdir .ssh
   - chmod 700 .ssh
 
-script: echo $HOST
+script: echo $host
 
