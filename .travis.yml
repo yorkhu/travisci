@@ -19,7 +19,7 @@ before_install:
   - eval `ssh-agent -s`
   - ssh-add .ssh/id_rsa
 
-script: ssh -o StrictHostKeyChecking=no $host "ls"
+script: echo "Deploy"
 
 after_success:
-  - echo "Deploy"
+  - ssh -o StrictHostKeyChecking=no -o LogLevel=quiet $host "ls"
